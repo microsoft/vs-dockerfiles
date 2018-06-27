@@ -1,20 +1,10 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Samples
+You can install Visual Studio Build Tools [into a container](https://docs.microsoft.com/en-us/visualstudio/install/build-tools-container) to support a consistent, isolated build environment. This repository hosts a number of examples - and is accepting [contributions](CONTRIBUTING.md) for more, useful examples - you can use to build a container image using Build Tools tailored to your project types and build pipeline. Because these container images can be massive - larger than probably anyone needs - and the permutations of different Windows, Visual Studio, and .NET Framework versions would complicate which version you might need, you are encouraged to use these samples or build on them and publish, if desired, images to your own Docker registry on your LAN or WAN.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+* [.NET Framework + native desktop](managed-native-desktop/README.md)
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Contributing
+To contribute your own sample Dockerfiles and optional support scripts, please see [CONTRIBUTING](CONTRIBUTING.md).
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## License
+This project and all examples herein are licensed under the [MIT license](LICENSE.txt).
