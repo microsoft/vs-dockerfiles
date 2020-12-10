@@ -4,7 +4,7 @@ We would love practical, unique, and inspiring samples to help developers tailor
 ## Rules
 1. All contributions must install Visual Studio Build Tools.
 2. All contributions must be text (dockerfiles, scripts, etc.).
-3. All contributions must adopt the [MIT license](LICENSE.txt) in the root of this project with accompanied header (see [example](managed-native-desktop/Dockerfile)).
+3. All contributions must adopt the [MIT license](LICENSE.txt) at the top of each file (see [example](managed-native-desktop/Dockerfile)).
 4. All contributions must be in a unique directory.
 5. All contributions must have a README file explaining in generalized terms (i.e. no company secrets, but providing context on who you are or represents is optional and might be useful) what sort of workloads the Dockerfile supports (see [example](managed-native-desktop/README.md)).
 6. All supporting files referenced within the Dockerfile must be text and included within the samples directory (see [example](managed-native-desktop/Install.cmd)).
