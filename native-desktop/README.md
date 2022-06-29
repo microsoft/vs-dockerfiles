@@ -7,20 +7,20 @@ We start from the microsoft/dotnet-framework:3.5-sdk-windowsservercore-1709 base
 To build this image from this directory, run:
 
 ```batch
-docker build -t buildtools2017native:latest -m 2GB .
+docker build -t buildtools2022native:latest -m 2GB .
 ```
 
 ## Running
 To map and build native sources from a clean source repository, run:
 
 ```batch
-docker run -m 2G -v %CD%:C:\src buildtools2017native:latest --name Solution msbuild /m c:\src\Solution.sln
+docker run -m 2G -v %CD%:C:\src buildtools2022native:latest --name Solution msbuild /m c:\src\Solution.sln
 ```
 
 You can optionally pass specific configurations to build as well.
 
 ```batch
-docker run -m 2G -v %CD%:C:\src buildtools2017native:latest --name Solution msbuild /m c:\src\Solution.sln /p:Configuration=Debug /p:Platform=x64
+docker run -m 2G -v %CD%:C:\src buildtools2022native:latest --name Solution msbuild /m c:\src\Solution.sln /p:Configuration=Debug /p:Platform=x64
 ```
 
 To build again run the container created in the previous step, e.g.

@@ -5,14 +5,14 @@ The Visual Studio setup engine builds both managed and native projects. Some man
 To build this image from this direectory, run:
 
 ```batch
-docker build -t buildtools2017:latest -m 2GB .
+docker build -t buildtools2022:latest -m 2GB .
 ```
 
 ## Running
 To map and build managed and native sources from a clean source repository, run:
 
 ```batch
-docker run -m 2G -v %CD%:C:\src buildtools2017:latest msbuild /m c:\src\Solution.sln
+docker run -m 2G -v %CD%:C:\src buildtools2022:latest msbuild /m c:\src\Solution.sln
 ```
 
 ## Issues
