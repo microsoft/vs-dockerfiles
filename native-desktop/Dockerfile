@@ -18,11 +18,11 @@ ADD https://nodejs.org/dist/v8.11.3/node-v8.11.3-x64.msi C:\TEMP\node-install.ms
 RUN start /wait msiexec.exe /i C:\TEMP\node-install.msi /l*vx "%TEMP%\MSI-node-install.log" /qn ADDLOCAL=ALL
 
 # Download channel for fixed install.
-ARG CHANNEL_URL=https://aka.ms/vs/15/release/channel
+ARG CHANNEL_URL=https://aka.ms/vs/17/release/channel
 ADD ${CHANNEL_URL} C:\TEMP\VisualStudio.chman
 
-# Download and install Build Tools for Visual Studio 2017 for native desktop workload.
-ADD https://aka.ms/vs/15/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
+# Download and install Build Tools for Visual Studio 2022 for native desktop workload.
+ADD https://aka.ms/vs/17/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
 RUN C:\TEMP\Install.cmd C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
     --channelUri C:\TEMP\VisualStudio.chman `
     --installChannelUri C:\TEMP\VisualStudio.chman `

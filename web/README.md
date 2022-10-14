@@ -9,7 +9,7 @@ On top of that we add the workloads for building .NET and .NET Core apps. Also a
 To build this image from this directory, run:
 
 ```batch
-docker build -t buildtools2017web:latest -m 2GB .
+docker build -t buildtools2022web:latest -m 2GB .
 ```
 ## Running with CAKE
 Assuming CAKE is used then a `build.ps1` script should be available. It can be run using the following command from a clean source repository:
@@ -18,10 +18,10 @@ Assuming CAKE is used then a `build.ps1` script should be available. It can be r
 docker run -m 2G ^
  -v %CD%:c:\src ^
  -w c:\src ^
- buildtools2017web:latest ^
+ buildtools2022web:latest ^
  powershell .\build.ps1 -Target="Default" -Transform="Debug" -Configuration="Debug
 ```
- - runs `buildtools2017web:latest` and passes in the current working directory `%CD%` and designates it `c:\src` 'inside' the container
+ - runs `buildtools2022web:latest` and passes in the current working directory `%CD%` and designates it `c:\src` 'inside' the container
  - designates the working directory to `c:\src`
  - starts the `build.ps1` script (in this instance with a debug config)
 
@@ -29,13 +29,13 @@ docker run -m 2G ^
 To map and build web sources from a clean source repository, run:
 
 ```batch
-docker run -m 2G -v %CD%:C:\src buildtools2017web:latest --name Solution msbuild /m c:\src\Solution.sln
+docker run -m 2G -v %CD%:C:\src buildtools2022web:latest --name Solution msbuild /m c:\src\Solution.sln
 ```
 
 You can optionally pass specific configurations to build as well.
 
 ```batch
-docker run -m 2G -v %CD%:C:\src buildtools2017web:latest --name Solution msbuild /m c:\src\Solution.sln /p:Configuration=Debug /p:Platform=x64
+docker run -m 2G -v %CD%:C:\src buildtools2022web:latest --name Solution msbuild /m c:\src\Solution.sln /p:Configuration=Debug /p:Platform=x64
 ```
 
 To build again run the container created in the previous step, e.g.
